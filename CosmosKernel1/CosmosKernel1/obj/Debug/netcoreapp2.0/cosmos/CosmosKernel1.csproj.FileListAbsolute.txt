@@ -7,3 +7,12 @@ C:\Users\Acer\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\c
 C:\Users\Acer\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.AssemblyInfo.cs
 C:\Users\Acer\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.dll
 C:\Users\Acer\source\repos\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.pdb
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.deps.json
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.dll
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\bin\Debug\netcoreapp2.0\cosmos\CosmosKernel1.pdb
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.csprojAssemblyReference.cache
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.csproj.CoreCompileInputs.cache
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.AssemblyInfoInputs.cache
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.AssemblyInfo.cs
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.dll
+C:\Users\abhin\Documents\BasicOS2\CosmosKernel1\CosmosKernel1\obj\Debug\netcoreapp2.0\cosmos\CosmosKernel1.pdb
