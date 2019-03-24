@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using Sys = Cosmos.System;
 
 namespace CosmosKernel1
@@ -9,7 +10,7 @@ namespace CosmosKernel1
     {
         protected override void BeforeRun()
         {
-            Console.WriteLine("Welcome to Raghav's OS.");
+            Console.WriteLine("Welcome to Raghav's Updated OS. v2.0");
         }
         public void Sum(float Num1 ,float Num2)
         {
@@ -21,16 +22,46 @@ namespace CosmosKernel1
         public void Game()
         {
             int Count = 0;
-            int Mind = 37;
-            int Guess;
+            int HighLow;
+            // int Guess;
+            int start = 0;
+            int end = 100;
+
+            Console.WriteLine("Guess any number between 1 and 100(Both inclusive)");
+            Console.WriteLine("You have 2 seconds to think ....");
+            // Wait function is needed here
 
 
-            Console.Write("Guess the number i have in mind");
+            while (start <= end)
+            {
+                int mid = (start + end) / 2;
+                Count++;
+                Console.WriteLine("Is your number : " + mid);
+                Console.WriteLine("Enter 0 if this is the correct answer. Enter -1 if your guessed number is lower or Enter 1 if your guessed number is higher");
+                HighLow = Int32.Parse(Console.ReadLine());
+                if (HighLow == 0)
+                {
+                    Console.WriteLine("It took me " + Count + " tries to guess your number.");
+                    break;
+                }
+                else if (HighLow == -1)
+                {
+                    end = mid - 1;
+                }
+                else if (HighLow == 1)
+                {
+                    start = mid + 1;
+                }
+                else
+                {
+                    Console.WriteLine("I don't understand please enter -1,0 OR 1. ONLY.");
+                }
+            }
 
-            Guess = Int32.Parse(Console.ReadLine());
+            //Guess = Int32.Parse(Console.ReadLine());
 
 
-
+            /*
             if (Mind == Guess)
                 {
                     Console.WriteLine("Success u found the number on my mind");
@@ -65,7 +96,7 @@ namespace CosmosKernel1
                 Guess = Int32.Parse(Console.ReadLine());
             }
             
-            Console.WriteLine("NO. OF GUESSES " + Count);
+            Console.WriteLine("NO. OF GUESSES " + Count);*/
         }
         private void NumberEntry()
         {
