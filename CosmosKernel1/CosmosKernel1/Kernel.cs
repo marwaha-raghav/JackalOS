@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading;
+using System.Timers;
 using Sys = Cosmos.System;
 
 namespace CosmosKernel1
@@ -11,6 +11,7 @@ namespace CosmosKernel1
         protected override void BeforeRun()
         {
             Console.WriteLine("Welcome to Raghav's Updated OS. v2.0");
+            Console.Beep();
         }
         public void Sum(float Num1 ,float Num2)
         {
@@ -28,8 +29,14 @@ namespace CosmosKernel1
             int end = 100;
 
             Console.WriteLine("Guess any number between 1 and 100(Both inclusive)");
-            Console.WriteLine("You have 2 seconds to think ....");
-            // Wait function is needed here
+            Console.WriteLine("You have 3 seconds to think ....");
+
+            DateTime T = DateTime.Now;
+
+            do
+            {
+                //Waiting
+            } while (T.AddSeconds(3) > DateTime.Now);
 
 
             while (start <= end)
@@ -118,22 +125,23 @@ namespace CosmosKernel1
                 Console.WriteLine("Enter 2 for playing Game");
                 Console.WriteLine("Enter 0 for EXIT");
                 Choice = int.Parse(Console.ReadLine());
-                                                                                 //menu driven run program
+                //menu driven run program
                 switch (Choice)
                 {
                     case 1:
                         NumberEntry();
                         break;
-                    case 2:Game();                                             
+                    case 2: Game();
                         break;
                 }
 
-            
-                
-                
-            } while (Choice!=0);
 
-            Console.WriteLine("you chose to Exit BYE");
+
+
+            } while (Choice != 0);
+            Console.Clear();
+            Console.WriteLine("you chose to Exit BYE! It is now safe to Power Off the system");
+            Sys.Power.Shutdown();
         }
     }
 }
