@@ -3,21 +3,38 @@ using System.Collections.Generic;
 using System.Text;
 using System.Timers;
 using Sys = Cosmos.System;
+using Cosmos.HAL;
 
 namespace CosmosKernel1
 {
     public class Kernel : Sys.Kernel
     {
+        //bool GUImode = false; //To be set to true once GUI is ready
         protected override void BeforeRun()
-        {
-            Console.WriteLine("Welcome to Raghav's Updated OS. v2.0");
+        {  
+            Console.WriteLine("Welcome to Raghav's Updated OS. v3.0");
             Console.Beep();
         }
-        public void Sum(float Num1 ,float Num2)
+        public void Calculate(float Num1 ,float Num2, char opt)
         {
-            float Sum = 0;
-            Sum = Num1 + Num2;                                  //func to calcuate sum
-            Console.WriteLine("Sum:" + Sum);
+            float ans;
+            if (opt == 'a')
+            {
+                ans = Num1 + Num2;
+            }
+            else if (opt == 'b')
+            {
+                ans = Num1 - Num2;
+            }
+            else if (opt == 'c')
+            {
+                ans = Num1 * Num2;
+            }
+            else
+            {
+                ans = Num1 / Num2;
+            }
+            Console.WriteLine("Answer : " + ans);
 
         }
         public void Game()
@@ -64,66 +81,45 @@ namespace CosmosKernel1
                     Console.WriteLine("I don't understand please enter -1,0 OR 1. ONLY.");
                 }
             }
-
-            //Guess = Int32.Parse(Console.ReadLine());
-
-
-            /*
-            if (Mind == Guess)
-                {
-                    Console.WriteLine("Success u found the number on my mind");
-                    Count++;
-                
-                
-                }
-            while ( Mind!=Guess)
-            {
-                
-                if (Guess > Mind)
-                 {
-                    Console.WriteLine("too high guess a lower value");
-                    Count++;
-                 }
-                else if(Guess<Mind)
-                {
-                    Console.WriteLine("too low guess a higher value");
-                    Count++;
-                }
-                else
-                {
-                    
-                    
-                        Console.WriteLine("Success u found the number on my mind");
-                        Count++;
-
-
-                    
-                }
-                Console.WriteLine("TRY AGAIN");
-                Guess = Int32.Parse(Console.ReadLine());
-            }
             
-            Console.WriteLine("NO. OF GUESSES " + Count);*/
         }
         private void NumberEntry()
         {
-            Console.WriteLine("Enter Value 1 :");
-            int num1 = Int32.Parse(Console.ReadLine()); //conversion from string value of int to 32bit int
-            Console.WriteLine("EnterValue2 : ");
-            int num2 = Int32.Parse(Console.ReadLine());
-            Sum(num1, num2);                             //function call for sum function
+            Console.WriteLine("WHAT OPERATION WOULD YOU LIKE TO PERFORM ?");
+            Console.WriteLine("a. Add");
+            Console.WriteLine("b. Subtract");
+            Console.WriteLine("c. Multiply");
+            Console.WriteLine("d. Divide");
+            char opt = char.Parse(Console.ReadLine());
+            
+            if ((int)opt >= 97 && (int)opt <= 100)
+            {
+                Console.WriteLine("Enter Value 1 : ");
+                int num1 = Int32.Parse(Console.ReadLine()); //conversion from string value of int to 32bit int
+                Console.WriteLine("Enter Value 2 : ");
+                int num2 = Int32.Parse(Console.ReadLine());
+                Calculate(num1, num2, opt);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Command. Please Try Again");
+            }
+                        
+        }
+        private void Shutdown()
+        {
+            Sys.Power.Shutdown();
         }
         protected override void Run()
         {
-
             int Choice;
-
             do
             {
-                Console.WriteLine("ENTER UR CHOICE");
-                Console.WriteLine("ENTER 1 FOR SUMMING OPERATION");
+                Console.WriteLine("ENTER YOUR CHOICE");
+                Console.WriteLine("Enter 1 to launch basic calculator");
                 Console.WriteLine("Enter 2 for playing Game");
-                Console.WriteLine("Enter 0 for EXIT");
+                Console.WriteLine("Enter 3 to launch the GUI");
+                Console.WriteLine("Enter 0 for shutdown");
                 Choice = int.Parse(Console.ReadLine());
                 //menu driven run program
                 switch (Choice)
@@ -131,17 +127,104 @@ namespace CosmosKernel1
                     case 1:
                         NumberEntry();
                         break;
-                    case 2: Game();
+                    case 2:
+                        Game();
                         break;
+                   /* case 3:
+                        Console.WriteLine("Booting DisplayDriver.");
+                        try
+                        {
+                            var display = new DisplayDriver();
+                            Console.WriteLine("ATTEMPTING");
+                            display.init(); //init display
+                            display.clear();
+                            display.setPixel((int)40, 50, 60);   
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Booting GUI failed. Continue in DOS mode.");
+                            
+                        }
+                        break;*/ //To launch GUI
                 }
 
-
-
-
             } while (Choice != 0);
-            Console.Clear();
-            Console.WriteLine("you chose to Exit BYE! It is now safe to Power Off the system");
-            Sys.Power.Shutdown();
+            Shutdown();
         }
     }
+    
+    //Possible Display Driver
+
+    /*
+    public class DisplayDriver
+    {
+    *
+        protected VGAScreen screen;
+        private int width, height;
+
+        public DisplayDriver()
+        {
+            screen = new VGAScreen();
+        }
+
+        public void init()
+        {
+            screen.SetGraphicsMode(VGAScreen.ScreenSize.Size320x200, VGAScreen.ColorDepth.BitDepth8);
+            width = screen.PixelWidth;
+            height = screen.PixelHeight;
+            clear(0);
+        }
+
+        public virtual void setPixel(int x, int y, int c)
+        {
+            if (screen.GetPixel320x200x8((uint)x, (uint)y) != (uint)c)
+                setPixelRaw(x, y, c);
+        }
+
+        public virtual byte getPixel(int x, int y)
+        {
+            return (byte)screen.GetPixel320x200x8((uint)x, (uint)y);
+        }
+
+        public virtual void clear()
+        {
+            clear(0);
+        }
+        public void DrawFilledRectangle(uint x0, uint y0, int Width, int Height, int color)
+        {
+            for (uint i = 0; i < Width; i++)
+            {
+                for (uint h = 0; h < Height; h++)
+                {
+                    setPixel((int)(x0 + i), (int)(y0 + h), color);
+                }
+            }
+        }
+        public virtual void clear(int c)
+        {
+            //screen.Clear(c);
+            DrawFilledRectangle(0, 0, width, height, c);
+        }
+
+        public virtual void step() { }
+
+        public int getWidth()
+        {
+            return width;
+        }
+
+        public int getHeight()
+        {
+            return height;
+        }
+
+        public void setPixelRaw(int x, int y, int c)
+        {
+
+            screen.SetPixel320x200x8((uint)x, (uint)y, (uint)c);
+
+        }
+
+    }
+    */
 }
