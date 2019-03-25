@@ -1,113 +1,87 @@
-# User-specific files
-
-.vs/
-
-*.suo
-
-*.user
-
-*.userosscache
-
-*.sln.docstates
-
-*.nuget.props
-
-*.nuget.targets
-
-
-
-# Build results
-
-
-
-[Aa]rtifacts
-
-[Bb]in
-
-[Pp]ackages/
-
-[Oo]bj/
-
-
-
-*.[Oo]bj
-
-*.suo
-
-*.ncb
-
-*.aps
-
-*.user
-
-*.ccscc
-
-*.cache
-
-*.bak
-
-*.swp
-
-*.pidb
-
-*.userprefs
-
-*.FileListAbsolute.txt
-
-*.[Cc]ache
-
-*.tlog
-
-*.vs10x
-
-*.exe.manifest
-
-*.mdb
-
-*.docstates
-
-*.vsp
-
-*.pdb
-
-*.lock.json
-
-*.nuget.props
-
-*.nuget.targets
+# Windows image file caches
 
 Thumbs.db
 
-build.force
+ehthumbs.db
 
 
 
-**/Build/VSIP/
+# Folder config file
 
-**/Setup/Output/
-
-**/Build/VMWare/Workstation/Cosmos.vmsd
-
-**/Build/VMWare/Workstation/Cosmos.vmxf
+Desktop.ini
 
 
 
-Setup/Current.iss
+# Recycle Bin used on file shares
 
-Cosmos.Assembler.Log
+$RECYCLE.BIN/
 
-UpgradeLog*.htm
 
-.sync/
 
-source/_ReSharper.Caches/
+# Windows Installer files
 
-*.~vsdx
+*.cab
 
-Docs/~$RingsGen2.xlsx
+*.msi
 
-source/Kernel-X86/90-Application/GuessKernelGen3.csproj
+*.msm
 
-Docs/~$RingsGen3.xlsx
+*.msp
 
-*.map
+
+
+# Windows shortcuts
+
+*.lnk
+
+
+
+# =========================
+
+# Operating System Files
+
+# =========================
+
+
+
+# OSX
+
+# =========================
+
+
+
+.DS_Store
+
+.AppleDouble
+
+.LSOverride
+
+
+
+# Thumbnails
+
+._*
+
+
+
+# Files that might appear on external disk
+
+.Spotlight-V100
+
+.Trashes
+
+
+
+# Directories potentially created on remote AFP share
+
+.AppleDB
+
+.AppleDesktop
+
+Network Trash Folder
+
+Temporary Items
+
+.apdisk
+
+CosmosKernel1\bin\*
