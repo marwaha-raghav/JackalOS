@@ -3,9 +3,9 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\abhin\Documents\BasicOS\CosmosKernel1\CosmosKernel1\obj\project.assets.json</ProjectAssetsFile>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Acer\Documents\BasicOS\CosmosKernel1\CosmosKernel1\obj\project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\abhin\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Acer\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.3</NuGetToolVersion>
   </PropertyGroup>
@@ -13,10 +13,10 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.netcore.app\2.0.9\build\netcoreapp2.0\Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app\2.0.9\build\netcoreapp2.0\Microsoft.NETCore.App.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props')" />
     <Import Project="$(NuGetPackageRoot)cosmos.build\2018.10.10\build\Cosmos.Build.props" Condition="Exists('$(NuGetPackageRoot)cosmos.build\2018.10.10\build\Cosmos.Build.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgCosmos_Build Condition=" '$(PkgCosmos_Build)' == '' ">C:\Users\abhin\.nuget\packages\cosmos.build\2018.10.10</PkgCosmos_Build>
+    <PkgCosmos_Build Condition=" '$(PkgCosmos_Build)' == '' ">C:\Users\Acer\.nuget\packages\cosmos.build\2018.10.10</PkgCosmos_Build>
   </PropertyGroup>
 </Project>
