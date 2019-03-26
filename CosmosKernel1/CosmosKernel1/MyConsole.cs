@@ -3,14 +3,16 @@ using Sys = Cosmos.System;
 
 public class MyConsole
 {
-   public Utilities Obj=new Utilities();       //object of utilities class used to access public member functions
+    public Utilities Obj=new Utilities(); //object of utilities class used to access public member functions
+    public GUI NewGUI = new GUI();
+
     public MyConsole()
 	{             
         //Initialize();                        //constructor
 	}
     private void Shutdown()
     {
-        Sys.Power.Shutdown();                  //SHUTdOWN FUNCTION
+        Sys.Power.Shutdown();                  //SHUTDOWN FUNCTION
     }
     public void RunConsole()
     {
@@ -32,22 +34,10 @@ public class MyConsole
                 case 2:
                     Obj.Game();
                     break;
-                    /* case 3:
-                         Console.WriteLine("Booting DisplayDriver.");
-                         try
-                         {
-                             var display = new DisplayDriver();
-                             Console.WriteLine("ATTEMPTING");
-                             display.init(); //init display
-                             display.clear();
-                             display.setPixel((int)40, 50, 60);   
-                         }
-                         catch (Exception)
-                         {
-                             Console.WriteLine("Booting GUI failed. Continue in DOS mode.");
-
-                         }
-                         break;*/ //To launch GUI
+                case 3:
+                    NewGUI.Initialize();
+                    NewGUI.RunGUI();
+                    break;
             }
 
         } while (Choice != 0);
