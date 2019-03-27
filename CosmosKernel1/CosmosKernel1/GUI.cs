@@ -12,7 +12,10 @@ public class GUI
     readonly int ScreenHeight = 600;
     readonly Pen MousePen = new Pen(Color.Black);
     readonly Pen GUIHomePen = new Pen(Color.White);
-    Point PrevousMouse;
+    Point PreviousMouse;
+    private Sys.MouseState PreviousState;
+    public Icons Icon = new Icons();
+
     public GUI()
 	{
         
@@ -22,12 +25,14 @@ public class GUI
         Console.WriteLine("GUI is booting up.");
         C = FullScreenCanvas.GetFullScreenCanvas(new Mode(ScreenWidth, ScreenHeight, ColorDepth.ColorDepth32));
         C.Clear(Color.White);
+        Icon.Render(C);
         CMouse.ScreenWidth = (uint)ScreenWidth;
         CMouse.ScreenHeight = (uint)ScreenHeight;
         CMouse.X = (uint)(ScreenWidth / 2); //Initializing Mouse at the center of the screen
         CMouse.Y = (uint)(ScreenHeight / 2);
-        PrevousMouse.X = (ScreenWidth / 2);
-        PrevousMouse.Y = (ScreenHeight / 2);
+        PreviousMouse.X = (ScreenWidth / 2);
+        PreviousMouse.Y = (ScreenHeight / 2);
+        PreviousState = CMouse.MouseState;
         Console.WriteLine("GUI booted up successfully.");
     }
     public void DrawMouse(Pen pen, Point cur)
@@ -90,22 +95,30 @@ public class GUI
                 CMouse.Y = (uint)(ScreenHeight - 8);
             }
             Point cur = new Point((int)CMouse.X, (int)CMouse.Y); //Point where Mouse is currently pointing
+            Sys.MouseState CurrentState = CMouse.MouseState;
             
             //Refreshing the screen 
             int UpdateWidth = 20;
             int UpdateHeight = 20;
 
-            if( (PrevousMouse.X != cur.X) || (PrevousMouse.Y != cur.Y))
+            if( (PreviousMouse.X != cur.X) || (PreviousMouse.Y != cur.Y))
             {
-                int x = Math.Min(Math.Max(PrevousMouse.X - (UpdateWidth / 2), 0), (ScreenWidth - UpdateWidth));
-                int y = Math.Min(Math.Max(PrevousMouse.Y - (UpdateHeight / 2), 0), (ScreenHeight - UpdateHeight));
+                int x = Math.Min(Math.Max(PreviousMouse.X - (UpdateWidth / 2), 0), (ScreenWidth - UpdateWidth));
+                int y = Math.Min(Math.Max(PreviousMouse.Y - (UpdateHeight / 2), 0), (ScreenHeight - UpdateHeight));
                 Point ClearRectangle = new Point(x, y);
                 C.DrawFilledRectangle(GUIHomePen, ClearRectangle, UpdateWidth, UpdateHeight);
-                PrevousMouse = cur;
+                PreviousMouse = cur;
+                Icon.ReRender(cur.X, cur.Y, C);
             }
 
             //Draw the Mouse
             DrawMouse(MousePen, cur);
+
+            if(PreviousState != CurrentState)
+            {
+                Icon.Click(cur.X, cur.Y);
+            }
+            
         }
     }
 }
