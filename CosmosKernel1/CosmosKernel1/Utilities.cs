@@ -99,6 +99,12 @@ public class Utilities
 
 
     }
-    
-    
+    /*public void PlayMusic()
+    {
+         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                       player.SoundLocation = "path of music";             //file storage system reqd
+    }
+    */
+
+
 }

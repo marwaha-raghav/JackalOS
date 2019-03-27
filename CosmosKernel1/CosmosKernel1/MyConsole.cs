@@ -16,31 +16,34 @@ public class MyConsole
     }
     public void RunConsole()
     {
-        int Choice;
+        string Choice;
         do
         {
-            Console.WriteLine("ENTER YOUR CHOICE");
-            Console.WriteLine("Enter 1 to launch basic calculator");
-            Console.WriteLine("Enter 2 for playing Game");
-            Console.WriteLine("Enter 3 to launch the GUI");
-            Console.WriteLine("Enter 0 for shutdown");
-            Choice = int.Parse(Console.ReadLine());
+            Console.WriteLine("ENTER COMMANDS");
+            Console.WriteLine("Current Build Supports Calculator, Game, GUI");           
+            //Choice = int.Parse(Console.ReadLine());
+            Choice = Console.ReadLine();
             //menu driven run program
             switch (Choice)
             {
-                case 1:
+                case "/calc":
                     Obj.NumberEntry();
                     break;
-                case 2:
+                case "/game":
                     Obj.Game();
                     break;
-                case 3:
+                case "/gui":
                     NewGUI.Initialize();
                     NewGUI.RunGUI();
                     break;
+                    /*case "/music": 
+                     PlayMusic();         //needs further code
+                       break;
+
+                     */
             }
 
-        } while (Choice != 0);
+        } while (Choice != "/exit");
           Shutdown();
     }
 

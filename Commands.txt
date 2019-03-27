@@ -1,0 +1,4 @@
+/calc
+/game
+/gui
+/exit
