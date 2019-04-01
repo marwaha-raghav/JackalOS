@@ -11,12 +11,14 @@ namespace CosmosKernel1
     public class Kernel : Sys.Kernel
     {
         public MyConsole Con =new MyConsole();
-        public GUI NewGUI = new GUI();
+        public Desktop NewGUI = new Desktop();
+//        public Utilities util = new Utilities();
 
         //obj for console class
         bool AccessConsole = false; //To check whether Console Access is required
         protected override void BeforeRun()
-        {  
+        {
+            Utilities.JackalOSLogo();
             Console.WriteLine("Welcome to the Updated JackalOS. v3.0.1");
             Console.Beep();
             Console.WriteLine("OS is loading....");
@@ -34,8 +36,7 @@ namespace CosmosKernel1
         {
             if (AccessConsole == false)
             {
-                NewGUI.Initialize();
-                NewGUI.RunGUI();
+                NewGUI.Run();
             }
             else
             {

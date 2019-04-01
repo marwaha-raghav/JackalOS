@@ -1,50 +1,53 @@
 ﻿using System;
 using Sys = Cosmos.System;
 
-public class MyConsole
+namespace CosmosKernel1
 {
-    public Utilities Obj=new Utilities(); //object of utilities class used to access public member functions
-    public GUI NewGUI = new GUI();
 
-    public MyConsole()
-	{             
-        //Initialize();                        //constructor
-	}
-    private void Shutdown()
+    public class MyConsole
     {
-        Sys.Power.Shutdown();                  //SHUTDOWN FUNCTION
-    }
-    public void RunConsole()
-    {
-        string Choice;
-        do
+        public Utilities Obj = new Utilities(); //object of utilities class used to access public member functions
+        public Desktop NewGUI = new Desktop();
+
+        public MyConsole()
         {
-            Console.WriteLine("ENTER COMMANDS");
-            Console.WriteLine("Current Build Supports Calculator, Game, GUI");           
-            //Choice = int.Parse(Console.ReadLine());
-            Choice = Console.ReadLine();
-            //menu driven run program
-            switch (Choice)
+            //Initialize();                        //constructor
+        }
+        private void Shutdown()
+        {
+            Sys.Power.Shutdown();                  //SHUTDOWN FUNCTION
+        }
+        public void RunConsole()
+        {
+            string Choice;
+            do
             {
-                case "/calc":
-                    Obj.NumberEntry();
-                    break;
-                case "/game":
-                    Obj.Game();
-                    break;
-                case "/gui":
-                    NewGUI.Initialize();
-                    NewGUI.RunGUI();
-                    break;
-                    /*case "/music": 
-                     PlayMusic();         //needs further code
-                       break;
+                Console.WriteLine("ENTER COMMANDS");
+                Console.WriteLine("Current Build Supports Calculator, Game, GUI");
+                //Choice = int.Parse(Console.ReadLine());
+                Choice = Console.ReadLine();
+                //menu driven run program
+                switch (Choice)
+                {
+                    case "/calc":
+                        Obj.NumberEntry();
+                        break;
+                    case "/game":
+                        Obj.Game();
+                        break;
+                    case "/gui":
+                        NewGUI.Run();
+                        break;
+                        /*case "/music": 
+                         PlayMusic();         //needs further code
+                           break;
 
-                     */
-            }
+                         */
+                }
 
-        } while (Choice != "/exit");
-          Shutdown();
+            } while (Choice != "/exit");
+            Shutdown();
+        }
+
     }
-
 }
