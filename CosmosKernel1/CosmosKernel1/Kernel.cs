@@ -18,6 +18,10 @@ namespace CosmosKernel1
         bool AccessConsole = false; //To check whether Console Access is required
         protected override void BeforeRun()
         {
+            //file system check info
+            var fs = new Sys.FileSystem.CosmosVFS();
+            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);      //displays fat file system info
+            //end
             Utilities.JackalOSLogo();
             Console.WriteLine("Welcome to the Updated JackalOS. v3.0.1");
             Console.Beep();
