@@ -17,6 +17,8 @@ public class Icons
         canvas.DrawFilledRectangle(new Pen(Color.Red), ShutdownStart, ShutdownSize, ShutdownSize);
         canvas.DrawCircle(new Pen(Color.White), new Point(765, 35), ShutdownSize / 2);
         canvas.DrawFilledRectangle(new Pen(Color.White), new Point(765, 25), 1, 20);
+        //Textbox Icon
+
     }
 
     public void ReRender(int x, int y, Canvas canvas)

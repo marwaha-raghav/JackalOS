@@ -32,7 +32,7 @@ namespace CosmosKernel1
      
         
         
-        protected override void Run()
+        protected override void  Run()
         {
             if (AccessConsole == false)
             {

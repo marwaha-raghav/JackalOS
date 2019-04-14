@@ -1691,23 +1691,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abhin\\.nuget\\packages\\": {},
+    "C:\\Users\\SARTHAK\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abhin\\Documents\\BasicOS\\CosmosKernel1\\CosmosKernel1\\CosmosKernel1.csproj",
+      "projectUniqueName": "C:\\Users\\SARTHAK\\Documents\\JackalOS\\CosmosKernel1\\CosmosKernel1\\CosmosKernel1.csproj",
       "projectName": "CosmosKernel1",
-      "projectPath": "C:\\Users\\abhin\\Documents\\BasicOS\\CosmosKernel1\\CosmosKernel1\\CosmosKernel1.csproj",
-      "packagesPath": "C:\\Users\\abhin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abhin\\Documents\\BasicOS\\CosmosKernel1\\CosmosKernel1\\obj\\",
+      "projectPath": "C:\\Users\\SARTHAK\\Documents\\JackalOS\\CosmosKernel1\\CosmosKernel1\\CosmosKernel1.csproj",
+      "packagesPath": "C:\\Users\\SARTHAK\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SARTHAK\\Documents\\JackalOS\\CosmosKernel1\\CosmosKernel1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\abhin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SARTHAK\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1715,7 +1715,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\abhin\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
+        "C:\\Users\\SARTHAK\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

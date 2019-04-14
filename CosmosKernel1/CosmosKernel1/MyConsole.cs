@@ -38,6 +38,8 @@ namespace CosmosKernel1
                     case "/gui":
                         NewGUI.Run();
                         break;
+                    
+                        
                         /*case "/music": 
                          PlayMusic();         //needs further code
                            break;
