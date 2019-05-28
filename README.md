@@ -23,4 +23,4 @@ GUI contains
 
 FUTURE WORK 
   
-  Addition of file system for information storage and then construction of a self made Music player for the OS.
+   Addition of file system for information storage and then construction of a self made Music player for the OS.
