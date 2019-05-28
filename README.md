@@ -15,6 +15,7 @@ Console contains
   1. Calculator
   2. Number guessing game
   3. A link to the GUI
+  
 GUI contains
   1. Paint Application
   2. Text renderer
