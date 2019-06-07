@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackalOS", "JackalOS\JackalOS.csproj", "{AB054B06-AAA3-470F-8E67-4D1232CBEB6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB054B06-AAA3-470F-8E67-4D1232CBEB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB054B06-AAA3-470F-8E67-4D1232CBEB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB054B06-AAA3-470F-8E67-4D1232CBEB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB054B06-AAA3-470F-8E67-4D1232CBEB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4854F103-87F2-418A-BD88-1C68405D5D98}
+	EndGlobalSection
+EndGlobal

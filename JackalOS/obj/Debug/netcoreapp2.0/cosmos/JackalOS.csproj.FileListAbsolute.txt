@@ -1,0 +1,9 @@
+D:\Git Repos\JackalOS\JackalOS\bin\Debug\netcoreapp2.0\cosmos\JackalOS.deps.json
+D:\Git Repos\JackalOS\JackalOS\bin\Debug\netcoreapp2.0\cosmos\JackalOS.dll
+D:\Git Repos\JackalOS\JackalOS\bin\Debug\netcoreapp2.0\cosmos\JackalOS.pdb
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.csprojAssemblyReference.cache
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.csproj.CoreCompileInputs.cache
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.AssemblyInfoInputs.cache
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.AssemblyInfo.cs
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.dll
+D:\Git Repos\JackalOS\JackalOS\obj\Debug\netcoreapp2.0\cosmos\JackalOS.pdb
