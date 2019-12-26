@@ -1,7 +1,7 @@
 # JackalOS
 
 ## 1. What is this?
-JackalOS is an attempt to better understand the working of simple GUI based operating systmes, by creating one!  
+JackalOS is an attempt to better understand the working of simple GUI based operating systems, by creating one!  
 It is built using the [COSMOS toolkit](https://www.gocosmos.org/) and is typed in C#.
 
 ## 2. Currently Working Features:
@@ -17,7 +17,7 @@ It is built using the [COSMOS toolkit](https://www.gocosmos.org/) and is typed i
 ## 4. Known Issues
 * Slow mouse movement when hovering over text menu's
 * Mouse when moved over text(in Notepad), drawing(in Paint) erases it.
-* Backspace in Notepad doesn't erase more than one character.
+* ~Backspace in Notepad doesn't erase more than one character.~ [FIXED]
 
 ## 5. How to run?
 1. Clone this repo to your local machine.  
