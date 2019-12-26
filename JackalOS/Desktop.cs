@@ -4,10 +4,10 @@ using Cosmos.System.Graphics;
 using System.Drawing;
 using CMouse = Cosmos.System.MouseManager;
 using Point = Cosmos.System.Graphics.Point;
-using CosmosKernel1.Drivers;
-using CosmosKernel1.Applications;
+using JackalOS.Drivers;
+using JackalOS.Applications;
 
-namespace CosmosKernel1
+namespace JackalOS
 {
     public class Desktop
     {
@@ -51,7 +51,7 @@ namespace CosmosKernel1
 
         private void Render()
         {
-            Text.StringTextHandler(C, "welcome to jackal os v0.0", WelcomeStart);
+            Text.StringTextHandler(C, "welcome to jackal os v1.0", WelcomeStart);
             DrawEnd = Text.StringTextHandler(C, "1. draw", DrawStart);
             TextBoxEnd = Text.StringTextHandler(C, "2. notepad", TextBoxStart);
             ShutdownEnd = Text.StringTextHandler(C, "3. shutdown", ShutdownStart);

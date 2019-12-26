@@ -1,7 +1,7 @@
 ﻿using System;
 using Sys = Cosmos.System;
 
-namespace CosmosKernel1
+namespace JackalOS
 {
     /// <summary>
     /// Utilities Class contains all the misc utilities functions of the OS.

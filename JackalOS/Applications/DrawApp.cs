@@ -4,9 +4,9 @@ using Cosmos.System.Graphics;
 using System.Drawing;
 using CMouse = Cosmos.System.MouseManager;
 using Point = Cosmos.System.Graphics.Point;
-using CosmosKernel1.Drivers;
+using JackalOS.Drivers;
 
-namespace CosmosKernel1.Applications
+namespace JackalOS.Applications
 {
     public class DrawApp
     {

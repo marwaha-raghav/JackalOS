@@ -7,7 +7,7 @@ using CMouse = Cosmos.System.MouseManager;
 using Point = Cosmos.System.Graphics.Point;
 
 
-namespace CosmosKernel1.Drivers
+namespace JackalOS.Drivers
 {
     /// <summary>
     /// This is the Mouse Class, it contains helper functions for drawing & bounding the mouse.

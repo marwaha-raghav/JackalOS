@@ -1,7 +1,7 @@
 ﻿using System;
 using Sys = Cosmos.System;
 
-namespace CosmosKernel1
+namespace JackalOS
 {
 
     public class MyConsole

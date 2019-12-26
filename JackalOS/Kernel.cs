@@ -5,9 +5,8 @@ using System.Timers;
 using Sys = Cosmos.System;
 
 
-namespace CosmosKernel1
+namespace JackalOS
 {
-
     public class Kernel : Sys.Kernel
     {
         public MyConsole Con = new MyConsole();

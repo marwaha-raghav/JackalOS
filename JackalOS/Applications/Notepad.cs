@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using Sys = Cosmos.System;
 using Cosmos.System.Graphics;
 using System.Drawing;
 using CMouse = Cosmos.System.MouseManager;
 using Point = Cosmos.System.Graphics.Point;
-using CosmosKernel1.Drivers;
+using JackalOS.Drivers;
 
-namespace CosmosKernel1.Applications
+namespace JackalOS.Applications
 {
     /// <summary>
     /// Notepad Application.
@@ -21,6 +22,7 @@ namespace CosmosKernel1.Applications
         Point PrevMouse = new Point(50, 50);
         TextRenderer Text = new TextRenderer();
         ConsoleKeyInfo Key;
+        List<Point> BackspaceBuffer = new List<Point>();
         public Notepad()
         {
         }
@@ -83,14 +85,18 @@ namespace CosmosKernel1.Applications
                     }
                     else if(CurrentChar == '`')
                     {
-                        C.DrawFilledRectangle(GUIHomePen, OldCursor, CurrentCursor.X - OldCursor.X, 20);
-                        CurrentCursor = OldCursor;
+                        if (BackspaceBuffer.Count > 0)
+                        {
+                            C.DrawFilledRectangle(GUIHomePen, BackspaceBuffer[BackspaceBuffer.Count - 1], CurrentCursor.X - BackspaceBuffer[BackspaceBuffer.Count - 1].X, 20);
+                            CurrentCursor = BackspaceBuffer[BackspaceBuffer.Count - 1];
+                            BackspaceBuffer.RemoveAt(BackspaceBuffer.Count - 1);
+                        }
                     }
                     else
                     {
+                        BackspaceBuffer.Add(CurrentCursor);
                         OldCursor = CurrentCursor;
                         CurrentCursor = Text.CharTextHandler(C, CurrentChar, CurrentCursor);
-
                     }
 
                     if (CurrentCursor.X > 800)
